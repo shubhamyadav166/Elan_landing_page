@@ -3,7 +3,7 @@ import React from 'react'
 const Questions = () => {
     return (
 
-        <div className='h-[230vh] relative'>
+        <div id="questions" className='h-[230vh] relative'>
             <div className='sticky top-0 h-screen bg-cover overflow-hidden bg-no-repeat' style={{ backgroundImage: "url('/elan-question-img.png')" }} />
 
             <div className='absolute top-0'>

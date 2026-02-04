@@ -9,6 +9,7 @@ import LocationAdvantage from '../pages/LocationAdvantage'
 import AboutElanGroup from '../pages/AboutElanGroup'
 import Navbar from '../components/Navbar'
 import Questions from '../pages/Questions'
+import Amenities from '../pages/Amenities'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Home />
       <About />
       <Highlights />
+      <Amenities />
       <Gallery />
       <FloorPlan />
       <Features />

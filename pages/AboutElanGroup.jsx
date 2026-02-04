@@ -3,7 +3,7 @@ import React from 'react'
 const AboutElanGroup = () => {
     return (
         <>
-            <div className='h-[230vh] relative'>
+            <div id="aboutElan" className='h-[230vh] relative'>
                 <div className='sticky top-0 h-screen bg-cover bg-no-repeat' style={{ backgroundImage: "url('/elan-video-bg.png')" }} />
 
                 <div className='absolute top-0'>
