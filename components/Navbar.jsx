@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    // Screen disable when mobile menu is open
+    useEffect(() => {
+        document.body.style.overflow = isVisible ? "hidden" : "auto";
+
+    }, [isVisible]);
+    // mobile menu 
+    const handleClick = () => {
+        setOpen(!open)
+        setIsVisible(!isVisible)
+    }
 
     return (
         <header className="fixed top-0 left-0 items-center h-20 w-full z-50 bg-black backdrop-blur-md">
@@ -45,7 +56,7 @@ const Navbar = () => {
                     {/* MOBILE MENU BUTTON */}
                     <button
                         className="lg:hidden text-white"
-                        onClick={() => setOpen(!open)}
+                        onClick={handleClick}
                     >
                         {open ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -68,7 +79,7 @@ const Navbar = () => {
                             key={item}
                             href={`#${item.toLowerCase().replace(" ", "")}`}
                             className="block border-b border-gray-700 pb-2"
-                            onClick={() => setOpen(false)}
+                            onClick={handleClick}
                         >
                             {item}
                         </a>
