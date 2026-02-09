@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { FaTimes } from "react-icons/fa";
+
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -58,7 +60,7 @@ const Navbar = () => {
                         className="lg:hidden text-white"
                         onClick={handleClick}
                     >
-                        {open ? <X size={28} /> : <Menu size={28} />}
+                        {open ? <FaTimes size={28} /> : < AiOutlineMenu size={28} />}
                     </button>
                 </div>
             </div>
